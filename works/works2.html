@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- CSSファイルの読み込み -->
+	<link rel="stylesheet" href="../destyle.css">
+	<link rel="stylesheet" href="../style.css" />
+
+	<!-- フォントの読み込み -->
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'vwt1tqy',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+
+	<title>miのポートフォリオ</title>
+</head>
+
+<body class="work">
+	<header>
+		<a href="../index.html">
+			<img src="../img/logo.svg" alt="mi" class="logo">
+		</a>
+
+		<!--ナビゲーションメニュー-->
+		<div class="nav">
+			<a href="index.html" class="underline">デザインしたもの</a>
+			<a href="../about.html" class="underline">わたしについて</a>
+			<a href="../index.html#contact" class="underline">お問い合わせ</a>
+		</div>
+
+		<div class="header-right">
+			<!--ココナラアイコン-->
+			<div class="icon-coconala">
+				<a href="" target="_blank" rel="noopener noreferrer">
+					<img src="../img/coconala_logo_b_tate_color_eng.png" alt="ココナラ">
+				</a>
+			</div>
+
+			<!--ハンバーガーメニュー-->
+			<nav class="hamburger-nav">
+				<!-- チェックボックス（画面には見えないがフォーカス可） -->
+				<input id="nav-toggle" class="nav-toggle" type="checkbox" />
+
+				<!-- ラベルがハンバーガー本体（クリックでチェックが切り替わる） -->
+				<label for="nav-toggle" class="menu-btn" aria-label="メニューを開く">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+
+				<div class="menu" role="navigation" aria-label="グローバルメニュー">
+					<ul>
+						<li>
+							<a href="index.html" class="hamburger-title">
+								<p class="fs-subhead">デザインしたもの</p>
+								<p class="sub-title">works</p>
+							</a>
+						</li>
+						<li>
+							<a href="../about.html" class="hamburger-title">
+								<p class="fs-subhead">わたしについて</p>
+								<p class="sub-title">about</p>
+							</a>
+						</li>
+						<li>
+							<a href="../index.html#contact" class="hamburger-title">
+								<p class="fs-subhead">お問い合わせ</p>
+								<p class="sub-title">contact</p>
+							</a>
+						</li>
+					</ul>
+					<div class="menu-icon">
+						<a href="" target="_blank" rel="noopener noreferrer">
+							<img src="../img/Instagram_Glyph_Gradient.png" alt="インスタグラム" class="logo-Instagram">
+						</a>
+						<a href="" target="_blank" rel="noopener noreferrer">
+							<img src="../img/coconala_logo_b_tate_color_eng.png" alt="ココナラ" class="logo-coconala">
+						</a>
+					</div>
+					<div>
+						<p>ご相談は下記のメールアドレスへ、<br>お気軽にご連絡ください。</p>
+						<a
+							href="mailto:abcdefg@hijk.com?subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91">
+							<p>abcdefg@hijk.com</p>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+
+	<main>
+		<div class="section-title">
+			<h1 class="fs-heading">デザインしたもの</h1>
+			<h2 class="sub-title">works</h2>
+		</div>
+
+		<section>
+			<div class="scroll-container">
+				<img src="../img/portfolio.jpg" alt="portfolioのデザイン">
+			</div>
+			<div class="work-title">
+				<h2 class="fs-subhead">ポートフォリオ</h2>
+				<p class="text-muted">WEBサイト</p>
+			</div>
+
+			<p class="work-description">
+				シンプルで信頼感のあるデザインを通じて、人と人をつなぐポートフォリオサイトを制作しました。
+				<span class="spacer"></span>
+				制作の背景や意図を丁寧に伝えることで、成果物と制作者の両方を知っていただけるようにしています。<br>
+				また、安心して相談していただけるよう、やさしい雰囲気のデザインを心がけました。
+			</p>
+
+			<div class="work-info">
+				<h3>制作範囲</h3>
+				<p class="fw-light pctab-only">ワイヤーフレーム作成 / デザイン / コーディング</p>
+				<p class="fw-light sp-only">ワイヤーフレーム作成<br>デザイン<br>コーディング</p>
+
+				<h3>製作時間</h3>
+				<p class="fw-light">時間</p>
+
+				<h3>使用ツール</h3>
+				<p class="fw-light">Figma / Canva / Photoshop / illustator / VSCode</p>
+			</div>
+
+			<div class="work-details">
+				<div class="work-item">
+					<h3>ターゲット</h3>
+					<p class="fw-light">デザイン制作を依頼したい個人事業主や中小企業<br>
+						シンプルで信頼感のあるデザインを求めている人
+					</p>
+				</div>
+
+				<div class="work-item">
+					<h3>課題</h3>
+					<p class="fw-light">自身のデザインスキルや考え方をわかりやすく伝える場がない</p>
+				</div>
+
+				<div class="work-item">
+					<h3>目的</h3>
+					<p class="fw-light">ターゲットに実力と人柄を伝え、依頼につながる導線を作る<br>
+						制作事例を見てもらい、「この人なら任せたい」と思ってもらう
+					</p>
+				</div>
+
+				<div class="work-item">
+					<h3>情報設計</h3>
+					<p class="fw-light">
+						「見やすさ」と「安心感」を第一に考え、成果物と制作者像の両方が伝わる構成にしました。<br>
+						これにより、依頼への心理的ハードルを下げ、クライアントに信頼してもらいやすくなるよう工夫しています。
+					</p>
+				</div>
+				<details>
+					<summary></summary>
+					<h3>デザインしたもの：クライアントが必要な制作物を簡単に確認できる</h3>
+					<p class="fw-light">
+						WEBサイトとバナーを分けて表示することで、クライアントが依頼したい制作物を簡単に確認できるようにしました。<br>
+						WEBサイトはモックアップで表示し、成果物のイメージを伝えるとともに、レスポンシブ対応が可能であることも示しています。
+					</p>
+
+					<h3>デザインしたもの - 詳細：成果物が課題解決につながることを伝える</h3>
+					<p class="fw-light">
+						成果物の制作意図が分かるように詳細ページを作成しました。<br>
+						ターゲット・課題・目的を明示し、クライアントの要望に沿った成果物が作れることをアピールしています。
+					</p>
+
+					<h3>わたしについて：共通点を見つけてもらい、心理的ハードルを下げる</h3>
+					<p class="fw-light">
+						人柄を伝え、依頼してもよさそうだと思ってもらえるように工夫しました。<br>
+						好きなものの写真を複数載せることで、共通点を見つけてもらい、心理的ハードルを下げています。
+					</p>
+
+					<h3>お問い合わせ：初めての人でも安全に問い合わせできる導線を作る</h3>
+					<p class="fw-light">
+						問い合わせ先を外部サイトに設定し、知らない人と直接やり取りする不安を軽減しました。<br>
+						メールアドレスも併記し、外部サイトを介さず相談できるようにしています。
+					</p>
+				</details>
+
+				<div class="work-item">
+					<h3>デザイン</h3>
+					<p class="fw-light">
+						「糸」をコンセプトに、私とクライアント、そしてクライアントとそのお客様が制作物を通じてつながることを表現しました。<br>
+						糸と糸が結ばれてできる布地を背景に用い、やさしい雰囲気を演出しています。
+						<span class="spacer"></span>
+						制作物を目立たせつつ柔らかさを出すため、暖色の淡いベージュをメインカラーに設定し、アクセントとして落ち着いた赤を使用しました。<br>
+						本文はナチュラルな背景になじむ濃いグレーを使用し、可読性も確保しています。
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<a href="../works/index.html" class="return-btn">
+			<img src="../img/return-arrow.svg" alt="←">
+			もどる
+		</a>
+	</main>
+
+	<footer>
+		<a href="#">
+			<img src="../img/logo.svg" alt="mi" class="logo">
+		</a>
+		<div class="footer-icon">
+			<a href="" target="_blank" rel="noopener noreferrer">
+				<img src="../img/Instagram_Glyph_Gradient.png" alt="インスタグラム" class="logo-Instagram">
+			</a>
+			<a href="" target="_blank" rel="noopener noreferrer">
+				<img src="../img/coconala_logo_b_tate_color_eng.png" alt="ココナラ" class="logo-coconala">
+			</a>
+		</div>
+		<div class="adress">
+			<p>ご相談は下記のメールアドレスへ、<br class="sp-only">お気軽にご連絡ください。</p>
+			<div>
+				<img src="../img/icon-mail.svg">
+				<a
+					href="mailto:abcdefg@hijk.com?subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91">
+					<p>abcdefg@hijk.com</p>
+				</a>
+			</div>
+		</div>
+		<p class="subhead">© 2025 mi</p>
+	</footer>
+	<!-- トップへ戻るボタン -->
+	<button id="back-to-top" aria-label="ページトップへ"></button>
+	<script src="../script.js"></script>
+
+</body>
+
+</html>

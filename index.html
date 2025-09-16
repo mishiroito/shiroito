@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSSファイルの読み込み -->
+	<link rel="stylesheet" href="destyle.css">
+	<link rel="stylesheet" href="style.css" />
+
+	<!-- フォントの読み込み -->
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'vwt1tqy',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+
+	<title>miのポートフォリオ</title>
+</head>
+
+<body class="index">
+
+	<!--表示中-->
+	<div id="loading-screen">
+		<!--メインビジュアル-->
+		<section class="main-visual">
+			<h1 class="fs-display biz-udmincho mv-text">
+				つながりを生み出す
+				<span class="line2">理由のあるデザイン</span>
+			</h1>
+		</section>
+	</div>
+
+	<!--本文-->
+	<!--loading画面用のid-->
+	<div id="main-content" style="display: none;">
+		<!--ヘッダー-->
+		<header>
+			<a href="#">
+				<img src="img/logo.svg" alt="mi" class="logo">
+			</a>
+
+			<!--ナビゲーションメニュー-->
+			<div class="nav">
+				<a href="works/index.html" class="underline">デザインしたもの</a>
+				<a href="about.html" class="underline">わたしについて</a>
+				<a href="#contact" class="underline">お問い合わせ</a>
+			</div>
+
+			<div class="header-right">
+				<!--ココナラアイコン-->
+				<div class="icon-coconala">
+					<a href="" target="_blank" rel="noopener noreferrer">
+						<img src="img/coconala_logo_b_tate_color_eng.png" alt="ココナラ">
+					</a>
+				</div>
+
+				<!--ハンバーガーメニュー-->
+				<nav class="hamburger-nav">
+					<!-- チェックボックス（画面には見えないがフォーカス可） -->
+					<input id="nav-toggle" class="nav-toggle" type="checkbox" />
+
+					<!-- ラベルがハンバーガー本体（クリックでチェックが切り替わる） -->
+					<label for="nav-toggle" class="menu-btn" aria-label="メニューを開く">
+						<span></span>
+						<span></span>
+						<span></span>
+					</label>
+
+					<div class="menu" role="navigation" aria-label="グローバルメニュー">
+						<ul>
+							<li>
+								<a href="works/index.html" class="hamburger-title">
+									<p class="fs-subhead">デザインしたもの</p>
+									<p class="sub-title">works</p>
+								</a>
+							</li>
+							<li>
+								<a href="about.html" class="hamburger-title">
+									<p class="fs-subhead">わたしについて</p>
+									<p class="sub-title">about</p>
+								</a>
+							</li>
+							<li>
+								<a href="index.html#contact" class="hamburger-title">
+									<p class="fs-subhead">お問い合わせ</p>
+									<p class="sub-title">contact</p>
+								</a>
+							</li>
+						</ul>
+						<div class="menu-icon">
+							<a href="" target="_blank" rel="noopener noreferrer">
+								<img src="img/Instagram_Glyph_Gradient.png" alt="インスタグラム" class="logo-Instagram">
+							</a>
+							<a href="" target="_blank" rel="noopener noreferrer">
+								<img src="img/coconala_logo_b_tate_color_eng.png" alt="ココナラ" class="logo-coconala">
+							</a>
+						</div>
+						<div>
+							<p>ご相談は下記のメールアドレスへ、<br>お気軽にご連絡ください。</p>
+							<a
+								href="mailto:abcdefg@hijk.com?subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91">
+								<p>abcdefg@hijk.com</p>
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+	</div>
+
+	<main>
+		<!--メインビジュアル-->
+		<section class="main-visual">
+			<h1 class="fs-display biz-udmincho">
+				つながりを生み出す
+				<span class="line2">理由のあるデザイン</span>
+			</h1>
+		</section>
+
+		<!--main-->
+		<!--デザインしたもの-->
+		<section class="works" id="works">
+			<div class="section-title">
+				<h2 class="fs-heading">デザインしたもの</h2>
+				<h3 class="sub-title">works</h3>
+			</div>
+
+			<div>
+				<article class="work-list">
+					<img src="img/mockup-smoothplus.png" alt="Smooth+様　LP" class="work-img">
+					<div>
+						<p class="fs-subhead">Smooth+様 LP</p>
+						<p>架空のスムージー専門店を想定したランディングページをデザインしました</p>
+						<p class="text-muted pc-only">Webサイト，ワイヤーフレーム作成 / デザイン / コーディング</p>
+						<p class="text-muted tab-only sp-only">Webサイト<br>ワイヤーフレーム作成 / デザイン / コーディング</p>
+						<div class="more">
+							<img src="img/more-arrow.svg" alt="右矢印">
+							<a href="works/works1.html">more</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="work-list">
+					<img src="img/mockuo-portfolio.png" alt="ポートフォリオ" class="work-img">
+					<div>
+						<p class="fs-subhead">ポートフォリオ</p>
+						<p>自分の制作物を紹介するためにポートフォリオサイトをデザインしました</p>
+						<p class="text-muted pc-only">Webサイト，ワイヤーフレーム作成 / デザイン / コーディング</p>
+						<p class="text-muted tab-only sp-only">Webサイト<br>ワイヤーフレーム作成 / デザイン / コーディング</p>
+						<div class="more">
+							<img src="img/more-arrow.svg" alt="右矢印">
+							<a href="works/works2.html">more</a>
+						</div>
+					</div>
+				</article>
+			</div>
+
+			<a href="works/index.html" class="more-btn">
+				<img src="img/motto-miru-arrow_pc.svg" alt="右矢印">
+				もっとみる
+			</a>
+
+		</section>
+
+		<!--わたしについて-->
+		<section class="about">
+			<div class="section-title">
+				<h2 class="fs-heading">わたしについて</h2>
+				<h3 class="sub-title">about</h3>
+			</div>
+			<div class="about-content">
+				<img src="img/profile-illustration.png" alt="イラスト">
+				<div>
+					<p class="name fs-subhead">mi</p>
+					<p> 会社員として製品画面の制作に携わった経験を基盤に、現在はWEBデザインにも取り組んでいます</p>
+				</div>
+			</div>
+			<a href="about.html" class="more-btn">
+				<img src="img/motto-miru-arrow_pc.svg" alt="右矢印">
+				もっとみる
+			</a>
+		</section>
+
+		<!--お問い合わせ-->
+		<section class="contact" id="contact">
+			<div class="section-title">
+				<h2 class="fs-heading">お問い合わせ</h2>
+				<h3 class="sub-title">contact</h3>
+			</div>
+			<div class="contact-info">
+				<p>
+					制作のご依頼は、下記クラウドサービス経由で承っております。<br>
+					契約・お支払いも安全に行えますので、はじめての方も安心してご利用いただけます。
+				</p>
+				<p class=" no-margin">クラウドサービス「ココナラ」</p>
+				<div class="coconala-link">
+					<img src="img/arrow.svg" class="icon-arrow">
+					<a href="" target="_blank" rel="noopener noreferrer">
+						<img src="img/coconala_logo_b_yoko_color_eng.png" alt="ココナラ" class="contact-logo-cocolana">
+					</a>
+				</div>
+			</div>
+			<div class="adress">
+				<p>ご相談は下記のメールアドレスへ、お気軽にご連絡ください。</p>
+				<div>
+					<img src="img/icon-mail.svg">
+					<a
+						href="mailto:abcdefg@hijk.com?subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91">
+						abcdefg@hijk.com
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<a href="#">
+			<img src="img/logo.svg" alt="mi" class="logo">
+		</a>
+		<div class="footer-icon">
+			<a href="" target="_blank" rel="noopener noreferrer">
+				<img src="img/Instagram_Glyph_Gradient.png" alt="インスタグラム" class="logo-Instagram">
+			</a>
+			<a href="" target="_blank" rel="noopener noreferrer">
+				<img src="img/coconala_logo_b_tate_color_eng.png" alt="ココナラ" class="logo-coconala">
+			</a>
+		</div>
+		<div class="adress">
+			<p>ご相談は下記のメールアドレスへ、<br class="sp-only">お気軽にご連絡ください。</p>
+			<div>
+				<img src="img/icon-mail.svg">
+				<a
+					href="mailto:abcdefg@hijk.com?subject=%E3%80%90%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%80%91">
+					abcdefg@hijk.com
+				</a>
+			</div>
+		</div>
+		<p class="subhead">© 2025 mi</p>
+	</footer>
+	<!-- トップへ戻るボタン -->
+	<button id="back-to-top" aria-label="ページトップへ"></button>
+	<script src="script.js"></script>
+</body>
+
+</html>
