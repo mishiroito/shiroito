@@ -303,7 +303,7 @@ header > :first-child{
 /*デザインしたもの*/
 .works{
 	padding: 150px 100px 0;
-	padding-bottom: clamp(50px 5vw 150px);
+	padding-bottom: clamp(50px, 5vw, 150px);
 }
 
 .work-list{
@@ -984,7 +984,7 @@ footer .adress div{
 	padding: 0;
 	margin: -1px;
 	overflow: hidden;
-	clip: ract(0 0 0 0);
+	clip: rect(0 0 0 0);
 	white-space: nowrap;
 	border: 0;
 }
@@ -1125,7 +1125,7 @@ footer .adress div{
 	.tab-only{
 		display: inline!important;
 	}
-	
+
 	header{
 		padding-right: 0;
 	}
@@ -1170,6 +1170,10 @@ footer .adress div{
 		top: 10px;
 		right: 5px;
 		z-index: 2000;
+	}
+
+	#loading-screen .main-visual{
+		background-image: url(img/main_tab.jpg);
 	}
 
 	.main-visual{
@@ -1589,7 +1593,7 @@ footer .adress div{
 
 	/*contact*/
 	.contact{
-		background-image: url(img/contact_sp_2.jpg);
+		background-image: url(img/contact_sp.jpg);
 		padding: 150px 30px 0;
 		height: 650px;
 	}
@@ -1739,8 +1743,13 @@ footer .adress div{
 		right: -10%;
 	}
 
+	#loading-screen .main-visual{
+		background-image: url(img/main_sp.jpg);
+	}
+
+
 	.main-visual{
-		background-image: url(img/main_sp_2.jpg);
+		background-image: url(img/main_sp.jpg);
 		background-position: right bottom;
 		margin-bottom: 50px;
 	}
