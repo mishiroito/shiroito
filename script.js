@@ -33,87 +33,58 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   /************TOPページだけローディング処理************/
-  if (!isTopPage) return;
+  const loading = document.getElementById("loading-screen");
+  const main = document.getElementById("main-content");
+  const mvText = document.querySelector(".mv-text");
 
-  const loading = document.getElementById('loading-screen');
-  const main = document.getElementById('main-content');
-  const mvText = document.querySelector('.mv-text');
+  // ローディング要素がなければ main を即表示
+  if (!main) return;
+  if (!loading) {
+    main.style.display = "block";
+    return;
+  }
 
-  if (!loading || !main) return;
+  // ローディングを表示
+  loading.style.display = "flex";
 
-	const fadeOutLoading = () => {
-    	loading.style.transition = "opacity 0.5s ease";
-    	loading.style.opacity = 0;
+  // キャッチコピーをフェードイン
+  if (mvText) {
+    setTimeout(() => {
+      mvText.classList.add("show"); // CSS側で opacity:1 になるように
+    }, 500); // 0.5秒後に表示
+  }
 
+  // ローディング終了 → main 表示
+  setTimeout(() => {
+    loading.style.transition = "opacity 0.5s ease";
+    loading.style.opacity = 0;
 
-		setTimeout(() => {
-			[main, document.querySelector('main')].forEach(el => {
-				if(el){
-					el.style.display = "block";
-					el.style.opacity = 0;
-					el.style.transition = "opacity 0.5s ease";
-					setTimeout(() => el.style.opacity = 1,50);
-				}
-			});
-			sessionStorage.setItem("visited", "true");
-		},500);
-  	};
-
-  const isFirstVisit = !sessionStorage.getItem("visited");
-  const hasHash = window.location.hash;
-
-	if (hasHash || !isFirstVisit) {
-		loading.style.display = "none";
-		main.style.display = "block";
-
- 	   if (mvText) mvText.classList.add('show');
-
-		if (hasHash) {
-    		const target = document.querySelector(window.location.hash);
-    		if (target) target.scrollIntoView({ behavior: "smooth" });
-    	}
-	} else {
-		window.addEventListener("load", () => {
-    		loading.style.display = "flex";
-
-    		if (mvText) {
-    			setTimeout(() => mvText.classList.add('show'), 300);
-    		}
-
-    		setTimeout(fadeOutLoading, 1500);
-    	});
-  	}
+    setTimeout(() => {
+      loading.style.display = "none";
+      main.style.display = "block";
+      main.style.opacity = 0;
+      main.style.transition = "opacity 0.5s ease";
+      setTimeout(() => (main.style.opacity = 1), 50);
+    }, 500);
+  }, 2000); // 2秒くらいローディングを見せる
 
   /************すきなもの************/
 	const sliders = document.querySelectorAll('.likes-grid');
 
-	/*
 	sliders.forEach(slider => {
-  		slider.addEventListener('click', () => {
-    		slider.classList.toggle('paused'); // クリックで paused を切り替え
-  		});
+		slider.addEventListener('click', () => {
+    		slider.classList.toggle('paused');
+ 		});
 
-  		slider.addEventListener('touchstart', (e) => {
-    		e.preventDefault(); // タッチ時のクリック二重発火防止
-    		slider.classList.toggle('paused'); // タップで paused 切替
+  		slider.addEventListener('touchstart', () => {
+    		slider.classList.toggle('paused');
   		});
 	});
-	*/
 
-	sliders.forEach(slider => {
-  slider.addEventListener('click', () => {
-    slider.classList.toggle('paused');
-  });
-
-  slider.addEventListener('touchstart', () => {
-    slider.classList.toggle('paused');
-  });
-});
-
-document.querySelectorAll('.like-item').forEach(item => {
-  item.addEventListener('click', () => {
-    item.classList.toggle('active');
-  });
-});
+	document.querySelectorAll('.like-item').forEach(item => {
+  		item.addEventListener('click', () => {
+    		item.classList.toggle('active');
+  		});
+	});
 
 });
