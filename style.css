@@ -1689,6 +1689,11 @@ footer .adress div{
 		transform: translate(-50%, -50%);
 	}
 
+	/*ローディング画面のキャッチコピー*/
+	.mv-text.show {
+		transform: translate(-50%, -50%) translateY(0); /* 中央寄せを残したままY移動 */
+	}
+
 	/***************************************about***************************************/
 }
 
