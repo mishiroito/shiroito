@@ -77,6 +77,7 @@ window.addEventListener('DOMContentLoaded', () => {
  		});
 
   		slider.addEventListener('touchstart', () => {
+			e.preventDefault(); // ← click と二重で走らないように
     		slider.classList.toggle('paused');
   		});
 	});
