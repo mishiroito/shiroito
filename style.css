@@ -172,14 +172,14 @@ img{
 /* 初期状態（文字） */
 .mv-text {
   opacity: 0;
-  transform: translate(-50%, -50%) translateY(20px);
+  transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 /* 文字フェードイン */
 .mv-text.show {
   opacity: 1;
-  transform: translate(-50%, -50%) translateY(0);
+  transform: translateY(0);
 }
 
 
@@ -1687,6 +1687,10 @@ footer .adress div{
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) translateY(0);
+	}
+
+	.mv-text {
+		transform: translate(-50%, -50%) translateY(20px); /* 中央寄せを残したままY移動 */
 	}
 
 	/*ローディング画面のキャッチコピー*/
