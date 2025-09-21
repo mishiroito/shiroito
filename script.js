@@ -44,12 +44,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (!loading || !main) return;
 
+	// フェードアウト関数
 	const fadeOutLoading = () => {
     	loading.style.transition = "opacity 0.5s ease";
     	loading.style.opacity = 0;
 
 
 		setTimeout(() => {
+			// ローディング画面を完全に非表示にする
+			loading.style.display = "none";
+
+			// メインコンテンツ表示
 			[main, document.querySelector('main')].forEach(el => {
 				if(el){
 					el.style.display = "block";
