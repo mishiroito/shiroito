@@ -1,6 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
 	const path = window.location.pathname;
-	const isTopPage = path.endsWith('index.html') || path === '/';
+	const isTopPage =
+		path.endsWith('index.html') ||
+		path === '/' ||
+		path.endsWith('/shiroito/'); // ← GitHub Pagesのトップページ対応
 
 	/************ハンバーガーメニューは全ページ共通************/
 	const menuBtn = document.querySelector('.menu-btn');
