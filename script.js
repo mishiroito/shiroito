@@ -102,15 +102,15 @@ window.addEventListener('DOMContentLoaded', () => {
  		});
 
   		slider.addEventListener('touchstart', (e) => {
-			e.preventDefault(); // ← click と二重で走らないように
     		slider.classList.toggle('paused');
   		});
 	});
 
 	document.querySelectorAll('.like-item').forEach(item => {
-  		item.addEventListener('click', () => {
-    		item.classList.toggle('active');
-  		});
+    	item.addEventListener('click', e => {
+        	e.stopPropagation(); // 親の paused toggle を止める
+        	item.classList.toggle('active');
+    	});
 	});
-
+	
 });
