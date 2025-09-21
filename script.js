@@ -95,22 +95,36 @@ window.addEventListener('DOMContentLoaded', () => {
 
   /************すきなもの************/
 	const sliders = document.querySelectorAll('.likes-grid');
-
-	sliders.forEach(slider => {
-		slider.addEventListener('click', () => {
-    		slider.classList.toggle('paused');
- 		});
-
-  		slider.addEventListener('touchstart', (e) => {
-    		slider.classList.toggle('paused');
-  		});
-	});
-
-	document.querySelectorAll('.like-item').forEach(item => {
-    	item.addEventListener('click', e => {
-        	e.stopPropagation(); // 親の paused toggle を止める
-        	item.classList.toggle('active');
-    	});
-	});
 	
+	sliders.forEach(slider => {
+		slider.addEventListener('click', e => {
+			const item = e.target.closest('.like-item'); // タップしたアイテムを取得
+			if (!item) return;
+			
+			// クリックされたアイテムのキャプション切替
+			const isActive = item.classList.toggle('active');
+			
+			// スライド全体の一時停止切替
+			if (isActive) {
+				slider.classList.add('paused'); // スライド停止
+			} else {
+				slider.classList.remove('paused'); // スライド再開
+			}
+		});
+
+		// タッチ対応
+		slider.addEventListener('touchstart', e => {
+			const item = e.target.closest('.like-item');
+			if (!item) return;
+			
+			const isActive = item.classList.toggle('active');
+			
+			if (isActive) {
+				slider.classList.add('paused');
+			} else {
+				slider.classList.remove('paused');
+			}
+		});
+	});
+
 });
