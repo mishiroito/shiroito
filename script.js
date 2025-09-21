@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', () => {
     		loading.style.display = "flex";
 
     		if (mvText) {
-    			setTimeout(() => mvText.classList.add('show'), 300);
+    			setTimeout(() => mvText.classList.add('show'));
     		}
 
     		setTimeout(fadeOutLoading, 1500);
