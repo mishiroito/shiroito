@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
     		slider.classList.toggle('paused');
  		});
 
-  		slider.addEventListener('touchstart', () => {
+  		slider.addEventListener('touchstart', (e) => {
 			e.preventDefault(); // ← click と二重で走らないように
     		slider.classList.toggle('paused');
   		});
