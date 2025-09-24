@@ -94,37 +94,55 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   /************すきなもの************/
-	const sliders = document.querySelectorAll('.likes-grid');
-	
-	sliders.forEach(slider => {
-		slider.addEventListener('click', e => {
-			const item = e.target.closest('.like-item'); // タップしたアイテムを取得
-			if (!item) return;
-			
-			// クリックされたアイテムのキャプション切替
-			const isActive = item.classList.toggle('active');
-			
-			// スライド全体の一時停止切替
-			if (isActive) {
-				slider.classList.add('paused'); // スライド停止
-			} else {
-				slider.classList.remove('paused'); // スライド再開
-			}
-		});
+(function() {
+  let speed = 5000;
 
-		// タッチ対応
-		slider.addEventListener('touchstart', e => {
-			const item = e.target.closest('.like-item');
-			if (!item) return;
-			
-			const isActive = item.classList.toggle('active');
-			
-			if (isActive) {
-				slider.classList.add('paused');
-			} else {
-				slider.classList.remove('paused');
-			}
-		});
-	});
+  const mySwiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 'auto',
+    speed: speed,
+    spaceBetween: 10,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+  });
+
+  let getTranslate;
+
+  document.querySelectorAll('.swiper').forEach(function(e){
+
+    // タップで一時停止
+    e.addEventListener('touchstart', function () {
+      getTranslate = mySwiper.getTranslate();
+      mySwiper.setTranslate(getTranslate);
+      mySwiper.setTransition(0);
+    });
+
+    // 指を離したら再開
+    e.addEventListener('touchend', function () {
+      getTranslate = mySwiper.getTranslate();
+
+      let activeSlide = document.querySelector('.swiper-slide-active');
+
+      let getSlideWidthMgLeft = parseFloat(activeSlide.style.marginLeft) || 0;
+      let getSlideWidthMgRight = parseFloat(activeSlide.style.marginRight) || 0;
+      let getSlideWidth = activeSlide.offsetWidth;
+
+      let getTotalSlideWidth = getSlideWidthMgLeft + getSlideWidthMgRight + getSlideWidth;
+      let diff = - getTotalSlideWidth - (getTranslate % getTotalSlideWidth);
+      let diffTime = diff / -getSlideWidth;
+      mySwiper.setTranslate(getTranslate + diff);
+      mySwiper.setTransition(speed * diffTime);
+    });
+
+    // 指を外で離した場合も再開
+    e.addEventListener('touchcancel', function () {
+      mySwiper.autoplay.start();
+    });
+  });
+})();
+
 
 });
